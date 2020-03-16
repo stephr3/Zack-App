@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zack's App</title>
+	<link rel="stylesheet" href="styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	</head>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$("#face").delay(500).fadeIn(1000);
+		    $("#face").click(function() {
+				document.getElementById('laugh').play();
+				$("#face-img").css('transform','rotate(10deg)');
+				setTimeout(function() {$("#face-img").css('transform','rotate(0deg)')}, 500)
+		    })
+		});
+	</script>	
+<body>
+	<a href="title.html"><div class="back-container"><img src="assets/back_arrow.png" class="back"></div></a>
+
+	<div class="face-container" id="face"><img src="assets/zack_face.png" class="face" id="face-img"></div>
+	<audio id="laugh">
+		<source src="assets/zack-laugh.mp3" type="audio/mp3" id="laugh">
+	</audio>	
+</body>
+</html>

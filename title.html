@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Zack's App</title>
+	<link rel="stylesheet" href="styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+	    $("#title-container").delay(500).fadeIn(500);
+	    $("#continue-container").delay(500).fadeIn(500);
+	    $("#continue-container").click(function() {
+			document.getElementById('choir').play();
+			var href = $('#poke-link').attr('href');
+    		setTimeout(function() {window.location = href}, 1500);
+    		return false;
+	    })
+	});
+</script>
+<body>
+	<div class="container" id="title-container"><img src="assets/title.png" class="title"></div>
+	<a href="poke.html" id="poke-link"><div class="container" id="continue-container"><img src="assets/continue_button.png" class="continue"></a>
+	<audio id="choir">
+		<source src="assets/choir.wav" type="audio/wav" id="choir">
+	</audio>
+</body>
+</html>
